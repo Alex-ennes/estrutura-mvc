@@ -1,6 +1,5 @@
 <?php 
     require_once('../assets/controllers/HomeController.php');
-    require_once('../assets/controllers/NoticiasController.php');
     require_once('../assets/controllers/errors/HttpErrorController.php');
 
     class Router {
