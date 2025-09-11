@@ -1,4 +1,6 @@
 <?php 
+    namespace Assets\Models;
+
     class Usuario {
         public function getUserData() {
             return [

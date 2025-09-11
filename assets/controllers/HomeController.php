@@ -1,6 +1,8 @@
 <?php
-    require_once __DIR__ . ('/../core/Controller.php');
-    require_once __DIR__ . ('/../models/Usuario.php');
+    namespace Assets\Controllers;
+
+    use Assets\Core\Controller;
+    use Assets\Models\Usuario;
 
     class HomeController extends Controller {
         public function index() {
