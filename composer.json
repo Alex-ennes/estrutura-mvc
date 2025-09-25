@@ -9,7 +9,11 @@
     "autoload": {
         "psr-4": {
             "Assets\\": "assets"
-        }
+        },
+    
+        "files": [
+            "assets/core/functions.php"
+        ]
     },
     "require": {}
 }

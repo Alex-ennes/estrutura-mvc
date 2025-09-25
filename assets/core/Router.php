@@ -1,7 +1,6 @@
 <?php 
     namespace Assets\Core;
 
-    use Assets\Controllers\HomeController;
     use Assets\Controllers\Errors\HttpErrorController;
 
     class Router {
@@ -9,9 +8,8 @@
             $url = trim($url, '/');
             $parts = $url ? explode('/', $url) : [];
 
-
-            $controllerName = $parts[0] ?? 'Home';
-            $controllerName = 'Assets\Controllers\\' . ucfirst($controllerName) . 'Controller';
+            $controllerName = 'Assets\Controllers\\' . ($parts[0] ?? 'Home');
+            $controllerName = ucfirst($controllerName) . 'Controller';
 
             $actionName = $parts[1] ?? 'index';
 
@@ -30,7 +28,6 @@
             }
             
             $params = array_slice($parts, 2);
-            dd($params);       
             call_user_func_array([$controller, $actionName], $params);
         }
     }
